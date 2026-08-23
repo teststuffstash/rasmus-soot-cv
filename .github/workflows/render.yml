@@ -20,7 +20,13 @@ jobs:
       # fit gate: the CV must stay exactly 1 page (rendercv writes one PNG
       # per page) — a fit failure blocks the release update below
       - run: devbox run check
-      # rolling release: same tag, assets replaced on every push
+      # rolling release: same tag, assets replaced on every push. The action
+      # never moves an existing tag, so re-point `latest` at HEAD first —
+      # otherwise the release page reads "N commits to main since this release"
+      # even though the PDF asset is fresh.
+      - run: |
+          git tag -f latest
+          git push -f origin latest
       - uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
