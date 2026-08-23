@@ -17,6 +17,9 @@ jobs:
       # No toolchain install: the runner image bakes Nix + devbox; the
       # project closure comes from devbox.lock via the in-cluster nix cache.
       - run: devbox run render
+      # fit gate: the CV must stay exactly 1 page (rendercv writes one PNG
+      # per page) — a fit failure blocks the release update below
+      - run: devbox run check
       # rolling release: same tag, assets replaced on every push
       - uses: softprops/action-gh-release@v2
         with:
