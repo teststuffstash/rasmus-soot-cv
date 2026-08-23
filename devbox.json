@@ -1,0 +1,8 @@
+{
+  "packages": ["python@3.12", "uv@latest"],
+  "shell": {
+    "scripts": {
+      "render": "uv venv --allow-existing .venv && uv pip install -q -p .venv 'rendercv[full]' && mkdir -p release && .venv/bin/rendercv render rendercv-onepage.yaml -o out-onepage -pdf release/Rasmus_Soot_CV.pdf"
+    }
+  }
+}

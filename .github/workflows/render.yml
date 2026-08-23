@@ -1,0 +1,25 @@
+name: render
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  render:
+    # Homelab ARC runner tier (homelab SERVICES.md "CI runner — ephemeral").
+    # NB: as a PUBLIC repo this needs the runner group's "Allow public
+    # repositories" toggle — see homelab docs/github-setup.md.
+    runs-on: homelab-ephemeral
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      # No toolchain install: the runner image bakes Nix + devbox; the
+      # project closure comes from devbox.lock via the in-cluster nix cache.
+      - run: devbox run render
+      # rolling release: same tag, assets replaced on every push
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest CV
+          files: release/*.pdf

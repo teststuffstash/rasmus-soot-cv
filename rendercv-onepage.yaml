@@ -1,0 +1,119 @@
+cv:
+  name: Rasmus Sööt
+  headline: Senior Automation Engineer — testing, CI/CD, AI agents
+  location: Tartu, Estonia
+  email: soot.rasmus@gmail.com
+  social_networks:
+  - network: LinkedIn
+    username: rasmus-soot
+  - network: GitHub
+    username: RasmusSoot
+  sections:
+    summary:
+    - '20 years of test automation on Estonia''s national digital infrastructure (eID,
+      authentication, elections, the state portal) where tests, pipelines, and environments
+      were always one job — specs, code, and testing in a constant loop building a
+      context that everybody understands and agrees with. Since 2026 the same loop
+      with LLM agents inside: research agents help shape a goal, worker agents ride
+      each issue to a verified pull request, and production metrics validate or revert
+      the result — humans review results, not diffs. Automate 100% of what should
+      be automated — Alan Page''s rule with new tools. I still garden when the robots
+      mow and water.'
+    experience:
+    - company: Independent R&D
+      position: agentic delivery & MCP systems
+      date: 2026 – present
+      highlights:
+      - '**Agentic software-delivery platform**: Autonomous multi-agent software delivery,
+        run on a self-managed Kubernetes platform'
+      - '**MCP servers over Estonian public data**: Model Context Protocol (MCP) servers
+        exposing Estonia''s legal corpus (Riigi Teataja) as statute and search tools,
+        grounding LLM answers in in-force law instead of stale training data'
+    - company: Nortal AS
+      position: Senior Test Automation Engineer
+      start_date: 2012-04
+      end_date: present
+      location: Estonia
+      highlights:
+      - Capability Lead for QA engineers; technical quality coach for the business
+        unit — helping/nudging every team onto git + YAML + CI practices
+      - '**2025 — cloud**: migrating the national eID service stack to AWS — SiVa
+        first, designed for the whole family (SiGa, TARA, GovSSO, eIDAS-Node); local
+        environments on devbox + kind, retiring a decade of docker-daemon setups'
+      - '**2021–2026 — state-platform scale**: eesti.ee modernization (k6 performance
+        suites, Cassandra backup/restore, Python data migrations, XForms split into
+        25 Jenkins-pipelined submodules), Pääsuke access-rights management, OOTS cross-border
+        evidence exchange (also part-time tech lead after the architect left), RIA
+        DigiDoc mobile apps — ephemeral docker-compose environments, Jenkins + Ansible
+        underneath, single-source YAML driving test data, mocks and environment config
+        as the portable method'
+      - '**2017–2021 — security-critical RIA services**: SiGa/SiVa signing, TARA national
+        authentication, eIDAS-Node 2 (later eIDAS-Node for Iceland, Auðkenni), DHX
+        document exchange; lead tester on the VIS3 election system — API-test suites
+        on that stack, Wiremock/Python mocks, CI pipelines with Jenkins/Salt/confd/Vault,
+        JMeter/Gatling load testing'
+      - '**2015–2018 — eID issuance, SK ID Solutions** (ID-card, Mobile-ID, Smart-ID):
+        the serious-devops turn — replaced shared pet VMs with infrastructure as code:
+        per-developer Oracle pluggable databases minted from Jenkins against an always-live
+        main branch, and an unattended 8-hour pipeline (Packer/Chef/Vagrant + GUI
+        automation) building the CA-workflow environment from fresh Windows ISO to
+        fully configured — its tamper-evident config log ruled out shortcuts; the
+        Spock/REST-assured stack and requirement-ID evidence method born here carried
+        every later project'
+      - '**2012–2015 — automation from zero**: Selenium/Robot Framework suites and
+        first CI, built from scratch (Playtech, Telia)'
+    - company: Cybernetica AS
+      position: QA Specialist, Test Group Manager
+      start_date: 2007-04
+      end_date: 2012-03
+      location: Estonia
+      highlights:
+      - Automated X-Road security server admin UI testing (Ruby/Capybara); tested
+        EMTA customs systems (ICS, ECS, NCTS, SUMDEC) including test-process improvement
+        and security audits; Volis functionality audit and load testing
+    - company: AS Mandator Estonia (later Fujitsu Estonia)
+      position: QA Specialist
+      start_date: 2006-02
+      end_date: 2007-04
+      location: Estonia
+      highlights:
+      - Full-stack tester and business analyst on EHIS — Estonian Education Information
+        System; built E2E UI automation with Jython + HtmlUnit
+    background:
+    - '**Talks**: [You MUST NOT use Postman for test automation according to RFC-9225](https://github.com/Test-Government/nordic-testing-days-2024-talk)
+      (Nordic Testing Days 2024); [Running Kubernetes locally](https://github.com/RasmusSoot/local-k8s)
+      (2025)'
+    - '**Education**: Tartu Forselius School, high school diploma (2000–2003)'
+    - '**Languages**: Estonian — native language (CEFR C2); English — proficient user
+      (CEFR C1)'
+    - '**Interests**: Following: Viktor Farcic, Dave Farley, Martin Fowler; Technology:
+      homelab as code — solo-run Talos Kubernetes platform (bare-metal + Proxmox)
+      with ~15 GitOps-reconciled services (S3, HA Postgres, observability, secrets
+      management, ephemeral CI runners, per-PR preview environments), every box recreatable
+      from git; OPNsense firewall; automated plant watering'
+design:
+  theme: classic
+  page:
+    top_margin: 1.2cm
+    bottom_margin: 1.2cm
+    left_margin: 1.5cm
+    right_margin: 1.5cm
+    show_footer: false
+    show_top_note: false
+  typography:
+    font_size:
+      body: 9.5pt
+      name: 22pt
+      section_titles: 1.3em
+  header:
+    space_below_name: 0.25cm
+    space_below_headline: 0.3cm
+    space_below_connections: 0.5cm
+  section_titles:
+    space_above: 0.22cm
+    space_below: 0.15cm
+  sections:
+    space_between_regular_entries: 0.55em
+  entries:
+    highlights:
+      space_between_items: 0.06em
